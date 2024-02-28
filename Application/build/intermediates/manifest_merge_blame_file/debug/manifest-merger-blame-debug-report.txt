@@ -1,0 +1,107 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<!--
+3 Copyright 2013 The Android Open Source Project
+4
+5 Licensed under the Apache License, Version 2.0 (the "License");
+6 you may not use this file except in compliance with the License.
+7 You may obtain a copy of the License at
+8
+9     http://www.apache.org/licenses/LICENSE-2.0
+10
+11 Unless required by applicable law or agreed to in writing, software
+12 distributed under the License is distributed on an "AS IS" BASIS,
+13 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+14 See the License for the specific language governing permissions and
+15 limitations under the License.
+16-->
+17<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+18    package="com.example.android.bluetoothlegatt"
+19    android:versionCode="1"
+20    android:versionName="1.0" >
+21
+22    <uses-sdk
+23        android:minSdkVersion="18"
+23-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+24        android:targetSdkVersion="28" />
+24-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml
+25
+26    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+27
+28
+29    <!--
+30    Declare this required feature if you want to make the app available to BLE-capable
+31    devices only.  If you want to make your app available to devices that don't support BLE,
+32    you should omit this in the manifest.  Instead, determine BLE capability by using
+33    PackageManager.hasSystemFeature(FEATURE_BLUETOOTH_LE)
+34    -->
+35    <uses-feature
+35-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:5-89
+36        android:name="android.hardware.bluetooth_le"
+36-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:19-63
+37        android:required="true" />
+37-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:31:64-87
+38    <uses-feature
+38-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:32:5-34:36
+39        android:name="android.hardware.camera"
+39-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:33:9-47
+40        android:required="false" />
+40-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:34:9-33
+41
+42    <uses-permission android:name="android.permission.BLUETOOTH" />
+42-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:5-67
+42-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:36:22-65
+43    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+43-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:37:5-73
+43-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:37:22-71
+44    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+44-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:38:5-78
+44-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:38:22-76
+45    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+45-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:39:5-80
+45-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:39:22-78
+46    <uses-permission android:name="android.permission.CAMERA" />
+46-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:40:5-64
+46-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:40:22-62
+47
+48    <application
+48-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:44:5-56:19
+49        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+49-->[com.android.support:support-compat:28.0.0] C:\Users\k1sso\.gradle\caches\transforms-3\0b22a6b07b3e498281e2fdb9d93c9c6b\transformed\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+50        android:debuggable="true"
+51        android:icon="@drawable/ic_launcher"
+51-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:45:9-45
+52        android:label="@string/app_name"
+52-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:44:18-50
+53        android:testOnly="true"
+54        android:theme="@android:style/Theme.Holo.Light" >
+54-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:46:9-56
+55        <activity
+55-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:9-53:20
+56            android:name="com.example.android.bluetoothlegatt.DeviceScanActivity"
+56-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:47:19-53
+57            android:label="@string/app_name" >
+57-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:48:13-45
+58            <intent-filter>
+58-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:49:13-52:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:50:17-68
+59-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:50:25-66
+60
+61                <category android:name="android.intent.category.LAUNCHER" />
+61-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:51:17-76
+61-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:51:27-74
+62            </intent-filter>
+63        </activity>
+64        <activity android:name="com.example.android.bluetoothlegatt.DeviceControlActivity" />
+64-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:54:9-58
+64-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:54:19-56
+65
+66        <service
+66-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:55:9-77
+67            android:name="com.example.android.bluetoothlegatt.BluetoothLeService"
+67-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:55:18-52
+68            android:enabled="true" />
+68-->C:\Users\k1sso\OneDrive - OsloMet\ADSE1310 - Internet of Things\Oblig 2\connectivity-samples-main\BluetoothLeGatt\Application\src\main\AndroidManifest.xml:55:53-75
+69    </application>
+70
+71</manifest>

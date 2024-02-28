@@ -1,0 +1,4 @@
+#Wed Feb 28 12:36:11 CET 2024
+base.0=C\:\\Users\\k1sso\\OneDrive - OsloMet\\ADSE1310 - Internet of Things\\Oblig 2\\connectivity-samples-main\\BluetoothLeGatt\\Application\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
