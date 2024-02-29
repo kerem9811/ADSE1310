@@ -134,21 +134,30 @@ public class BluetoothLeService extends Service {
             Log.w(TAG, "BluetoothGatt not initialized");
             return;
         } else {
-            Log.w(TAG, "SUKSESS" + action + intent.getData());
+            Log.w(TAG, "SUKSESS");
             readCharacteristic(characteristic);
             int data = characteristic.getIntValue(BluetoothGattCharacteristic.FORMAT_UINT32, 0);
             Log.w(TAG, String.valueOf(data));
-            if (data == 1127495233 || data == 1144075842 || data == 892483123 || data == 842020404) {
-                // Map point based on address
-                Uri location = Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway,+Mountain+View,+California");
-// Or map point based on latitude/longitude
-// Uri location = Uri.parse("geo:37.422219,-122.08364?z=14"); // z param is zoom level
-                Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-                mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(mapIntent);
-//                Intent actioncallbutton = new Intent(Intent.ACTION_CALL_BUTTON);
-//                actioncallbutton.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                startActivity(actioncallbutton);
+            switch (data) {
+                case 1127495233:
+                    Uri location = Uri.parse("geo:0,0?q=Pilestredet+35,+Oslo");
+                    Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
+                    mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(mapIntent);
+                    break;
+                case 1144075842:
+                    Uri location2 = Uri.parse("geo:1,-1?z=14");
+                    Intent mapIntent2 = new Intent(Intent.ACTION_VIEW, location2);
+                    mapIntent2.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(mapIntent2);
+                    break;
+                case 892483123:
+                    Intent actioncallbutton = new Intent(Intent.ACTION_CALL_BUTTON);
+                    actioncallbutton.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(actioncallbutton);
+                    break;
+                case 842020404:
+                    break;
             }
         }
         sendBroadcast(intent);
